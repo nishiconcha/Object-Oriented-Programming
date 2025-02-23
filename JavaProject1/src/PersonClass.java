@@ -1,35 +1,36 @@
-public class MainClassJava {
+import java.util.Scanner;
+
+public class PersonClass {
     public static void main(String[] args) {
-        // For Person Class
-        System.out.println("---- Person Class ----");
-        Person p1 = new Person("Nishi", 19, "San Juan City");
-        Person p2 = new Person("Leonnah", 18, "Paco Manila");
-        Person p3 = new Person("Armeyah", 19, "San Juan City");
-        Person p4 = new Person("Ari", 20, "Mandaluyong City");
-        Person p5 = new Person("Deanne", 22, "San Juan City");
+        Scanner scanner = new Scanner(System.in);
 
-        p1.displayInfo();
-        p2.displayInfo();
-        p3.displayInfo();
-        p4.displayInfo();
-        p5.displayInfo();
+        // Person Class
+        System.out.println("Enter details for 5 people:");
+        Person[] people = new Person[5];
+        for (int i = 0; i < 5; i++) {
+        	
+        	// Get name
+            System.out.print("Enter name: ");
+            String name = scanner.nextLine();
+            
+            // Get age
+            System.out.print("Enter age: ");
+            int age = scanner.nextInt();
+            scanner.nextLine();
+            
+            // Get address
+            System.out.print("Enter address: ");
+            String address = scanner.nextLine();
+            people[i] = new Person(name, age, address);
+        }
 
-        // For Dog Class
-        System.out.println("\n---- Dog Class ----");
-        Dog d1 = new Dog("Fifi", "Shitzu");
-        Dog d2 = new Dog("Snowy", "Half Shitzu & Half-Puddle");
-
-        d1.displayInfo();
-        d2.displayInfo();
-
-        // For Rectangle Class
-        System.out.println("\n---- Rectangle Class ----");
-        Rectangle rect = new Rectangle(5.0, 10.0);
-        System.out.println("Area: " + rect.getArea());
-        System.out.println("Perimeter: " + rect.getPerimeter());
+        System.out.println("\nPerson Details:");
+        for (Person p : people) {
+            p.display();
+        }
+        scanner.close();
     }
 }
-
 
 class Person {
     private String name;
@@ -42,41 +43,7 @@ class Person {
         this.address = address;
     }
 
-    public void displayInfo() {
+    public void display() {
         System.out.println("Name: " + name + "\t Age: " + age + "\t Address: " + address);
-    }
-}
-
-
-class Dog {
-    private String name;
-    private String breed;
-
-    public Dog(String name, String breed) {
-        this.name = name;
-        this.breed = breed;
-    }
-
-    public void displayInfo() {
-        System.out.println("Dog Name: " + name + "\t Breed: " + breed);
-    }
-}
-
-
-class Rectangle {
-    private double width;
-    private double height;
-
-    public Rectangle(double width, double height) {
-        this.width = width;
-        this.height = height;
-    }
-
-    public double getArea() {
-        return width * height;
-    }
-
-    public double getPerimeter() {
-        return 2 * (width + height);
     }
 }
