@@ -50,6 +50,7 @@ public class MainClass1 {
                         String name = scanner.nextLine();
                         System.out.print("Enter breed: ");
                         String breed = scanner.nextLine();
+                        System.out.print("\n");
                         dogs[i] = new Dog(name, breed);
                     }
 
