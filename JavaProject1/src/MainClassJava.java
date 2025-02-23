@@ -18,13 +18,9 @@ public class MainClassJava {
         System.out.println("\n---- Dog Class ----");
         Dog d1 = new Dog("Fifi", "Shitzu");
         Dog d2 = new Dog("Snowy", "Half Shitzu & Half-Puddle");
-        Dog d3 = new Dog("Kira", "Golden Retriever");
-        Dog d4 = new Dog("River", "Husky");
 
         d1.displayInfo();
         d2.displayInfo();
-        d3.displayInfo();
-        d4.displayInfo();
 
         // For Rectangle Class
         System.out.println("\n---- Rectangle Class ----");
