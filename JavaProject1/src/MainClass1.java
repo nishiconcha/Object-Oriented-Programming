@@ -68,7 +68,6 @@ public class MainClass1 {
                             String newName = scanner.nextLine();
                             System.out.print("Enter new breed: ");
                             String newBreed = scanner.nextLine();
-                            System.out.print("\n");
                             dogs[i].setName(newName);
                             dogs[i].setBreed(newBreed);
                         }
@@ -80,7 +79,7 @@ public class MainClass1 {
                     }
                     break;
 
-                    
+                  
                 // For Rectangle Calculator
                 case 3:
                     System.out.print("\nEnter width of the rectangle: ");
