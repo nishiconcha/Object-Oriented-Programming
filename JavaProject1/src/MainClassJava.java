@@ -67,9 +67,6 @@ class Dog {
 }
 
 
-//HAI Changes frfr
-
-
 class Rectangle {
     private double width;
     private double height;
