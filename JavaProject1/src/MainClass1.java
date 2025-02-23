@@ -77,7 +77,7 @@ public class MainClass1 {
                             d.display();
                         }
                     }
-                break;
+                    break;
 
                   
                 // For Rectangle Calculator
